@@ -1,0 +1,14 @@
+name: BowMotion
+version: '1.0'
+main: dev.skippaddin.bowmotion.bowMotion.BowMotion
+api-version: '1.21'
+commands:
+  BowMotion:
+    description: "Commands for the BowMotion plugin."
+    permissions:
+      BowMotion.command.start:
+        description: "Starts the challenge."
+      BowMotion.command.stop:
+        description: "Ends the challenge and saves the timer."
+      BowMotion.command.reset:
+        description: "Resets the timer if the game is not running."
