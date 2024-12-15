@@ -24,7 +24,7 @@ Du kannst dich nur bewegen, indem du mit einem Bogen schießt. Nach dem Abschuss
 
 ## 📦 Voraussetzungen
 
-- **Essentials (optional):** Das Plugin unterstützt Essentials für sichere Teleports (Safe Teleports). Essentials wird jedoch nicht benötigt, um BowMotion zu nutzen.
+- **Essentials (optional):** Das Plugin unterstützt Essentials für sichere Teleports (Safe Teleports). Essentials wird jedoch nicht benötigt, um BowMotion zu nutzen. Stellt sicher, in der config.yml von Essentials, `teleport-to-center` auf `false` zu stellen.
 - **Minecraft-Version:** Getestet mit den Versionen **1.21.1** und **1.21.4**.
 
 ---
