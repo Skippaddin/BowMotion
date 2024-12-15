@@ -1,6 +1,6 @@
-package dev.skippaddin.bowmotion.bowMotion.listeners;
+package dev.skippaddin.bowmotion.listeners;
 
-import dev.skippaddin.bowmotion.bowMotion.BowMotion;
+import dev.skippaddin.bowmotion.BowMotion;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -12,10 +12,9 @@ public class PlayerDeathListener implements Listener {
 
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {
-        if (BowMotion.isRunning() || BowMotion.isStarting()) {
+        if (BowMotion.isRunning()) {
             BowMotion.getTimerTask().cancel();
             BowMotion.setRunning(false);
-            BowMotion.setStarting(false);
             BowMotion.getParticipatingPlayers().clear();
             BowMotion.resetTimer();
 

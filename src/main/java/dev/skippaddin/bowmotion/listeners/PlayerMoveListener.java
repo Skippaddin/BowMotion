@@ -1,6 +1,6 @@
-package dev.skippaddin.bowmotion.bowMotion.listeners;
+package dev.skippaddin.bowmotion.listeners;
 
-import dev.skippaddin.bowmotion.bowMotion.BowMotion;
+import dev.skippaddin.bowmotion.BowMotion;
 import org.bukkit.Location;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
@@ -19,15 +19,6 @@ public class PlayerMoveListener implements Listener {
             Player player = e.getPlayer();
 
             if (BowMotion.getTeleportedPlayers().contains(player.getUniqueId())) {
-//                Location toCopy = e.getTo().clone();
-//                toCopy.setY(toCopy.getY() - 1);
-//                Block blockBelow = toCopy.getBlock();
-//
-//                if ((blockBelow.getType().isSolid() || blockBelow.isLiquid()) && e.getTo().getY() >= e.getFrom().getY()) {
-//                    BowMotion.getTeleportedPlayers().remove(uuid);
-//                } else {
-//                    return;
-//                }
 
                 Location playerLocation = player.getLocation();
 
