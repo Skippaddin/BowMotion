@@ -1,5 +1,5 @@
 name: BowMotion
-version: '1.0'
+version: '1.0.1'
 main: dev.skippaddin.bowmotion.BowMotion
 api-version: '1.21'
 softdepend:

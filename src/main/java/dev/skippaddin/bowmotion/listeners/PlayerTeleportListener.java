@@ -30,7 +30,6 @@ public class PlayerTeleportListener implements Listener {
                     FinishGameUtility.finishGame();
                 }
             } else if (e.getCause().equals(PlayerTeleportEvent.TeleportCause.ENDER_PEARL)) {
-                System.out.println("Triggered");
                 e.setCancelled(true);
             }
         }
@@ -59,7 +58,7 @@ public class PlayerTeleportListener implements Listener {
 
     @EventHandler
     public void onPlayerMount(EntityMountEvent e) {
-        if (e.getEntity() instanceof Player) {
+        if (BowMotion.isRunning() && e.getEntity() instanceof Player) {
             e.setCancelled(true);
         }
     }
