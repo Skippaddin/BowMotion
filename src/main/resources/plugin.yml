@@ -1,7 +1,9 @@
 name: BowMotion
 version: '1.0'
-main: dev.skippaddin.bowmotion.bowMotion.BowMotion
+main: dev.skippaddin.bowmotion.BowMotion
 api-version: '1.21'
+softdepend:
+  - Essentials
 commands:
   BowMotion:
     description: "Commands for the BowMotion plugin."

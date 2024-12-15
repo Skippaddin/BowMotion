@@ -1,4 +1,4 @@
-package dev.skippaddin.bowmotion.bowMotion.commands;
+package dev.skippaddin.bowmotion.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

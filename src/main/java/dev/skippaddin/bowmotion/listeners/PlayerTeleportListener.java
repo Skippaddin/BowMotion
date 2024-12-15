@@ -1,8 +1,8 @@
-package dev.skippaddin.bowmotion.bowMotion.listeners;
+package dev.skippaddin.bowmotion.listeners;
 
-import dev.skippaddin.bowmotion.bowMotion.BowMotion;
+import dev.skippaddin.bowmotion.BowMotion;
+import dev.skippaddin.bowmotion.utility.FinishGameUtility;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -27,21 +27,7 @@ public class PlayerTeleportListener implements Listener {
                     e.getTo().getWorld().getEnvironment() == World.Environment.NORMAL) {
                 BowMotion.getParticipatingPlayers().remove(e.getPlayer().getUniqueId());
                 if (BowMotion.getParticipatingPlayers().isEmpty()) {
-                    BowMotion.getTimerTask().cancel();
-                    BowMotion.setRunning(false);
-                    Long timer = BowMotion.getTimer();
-
-                    Long hours = timer / 3600;
-                    Long minutes = timer % 3600 / 60;
-                    Long seconds = timer % 60;
-
-                    String buildTimer = String.format("%02d:%02d:%02d", hours, minutes, seconds);
-
-                    for (Player player : Bukkit.getOnlinePlayers()) {
-                        player.sendTitle(ChatColor.GOLD + "Congratulations!", "", 10, 20, 10);
-                        player.sendMessage(ChatColor.GREEN + "Congrats! You have finished in: " + ChatColor.GOLD + buildTimer);
-                    }
-                    BowMotion.resetTimer();
+                    FinishGameUtility.finishGame();
                 }
             } else if (e.getCause().equals(PlayerTeleportEvent.TeleportCause.ENDER_PEARL)) {
                 System.out.println("Triggered");
